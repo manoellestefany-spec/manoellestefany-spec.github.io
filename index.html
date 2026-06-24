@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Equinos de Elite</title>
+            <link rel="stylesheet" href="style.css"/>
+    </head>
+<body>
+    
+     <header>
+        <h1> As principais raças de cavalos utilizadas no Brasil</h1>
+        <p>Conheça as características e a história das raças Quarto de Milha,Mangalarga Machador e Crioulo.</p>
+     </header>
+
+     <main>
+        <section id="introducao">
+            <h2>A Importância da Genética Equina</h2>
+            <p>O cavalo é um dos animais mais importantes na história do desenvolvimento humano, desempenhando papéis fundamentais no trabalho, no esporte e no lazer. No Brasil, a seleção genética de raças específicas permitiu o surgimento de exemplares extremamente adaptados ao clima e às necessidades locais.</p>
+            <p>Cada raça possui aptidões únicas: algumas se destacam pela velocidade explosiva, outras pela resistência em longas distâncias ou pelo conforto durante a montaria, como é o caso das raças de marcha.</p>
+        </section>
+
+        <section id="racas">
+            <h2>Raças em Destaque</h2>
+            <ul>
+                <li><strong>Quarto de Milha:</strong> Famoso por sua velocidade em curta distância e muito utilizado no nordeste para a vaquejada.</li>
+                <li><strong>Mangalarga Marchador:</strong> Conhecido pelo seu andar macio (marcha), ideal para cavalgadas e lazer.</li>
+                <li><strong>Crioulo:</strong> O símbolo do Rio Grande do Sul, extremamente rústico e resistente.</li>
+            </ul>
+        </section>
+
+        <section id="comparativo">
+            <h2>Tabela Comparativa de Equinos</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th><b>Raça</b></th>
+                        <th><b>Origem Principa</b></th>
+                        <th><b>Principal Aptidão</b></th>
+                        <th><b>Tipo de Andamento</b></th>
+                    </tr>
+                </thead>
+            
+                    <tr>
+                        <td>Quarto de Milha</td>
+                        <td>Estados Unidos</td>
+                        <td>Trabalho e Velocidade</td>
+                        <td rowspan="2">Trote</td>
+                    </tr>
+                    <tr>
+                        <td>Crioulo</td>
+                        <td>Brasil/Argentina/Uruguai</td>
+                        <td>Trabalho de Campo e Resistência</td> 
+                    </tr>
+                    <tr>
+                        <td>Mangalarga Marchador</td>
+                        <td>Brasil (Minas Gerais)</td>
+                        <td>Lazer e Cavalgada</td>
+                        <td>Marcha Batida/Picada</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pé duro</td>
+                        <td>Brasil (nordeste)</td>
+                        <td> manejo com o gado</td>
+                        <td>Marcha Picada</td>
+                    </tr>
+                
+            </table>
+        </section>
+
+        <section id="acessibilidade">
+            <h2>imagem de exemplo das raças</h2>
+            <figure>
+                <img src="https://www.mundoecologia.com.br/wp-content/uploads/2019/10/Quarto-de-Milha-3.jpg"  width="350" height="350" alt="Quarto de Milha"> <p><i><mark>Quarto de milha</mark></i></p>
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe-j6S-9GvMYdHOe8mZ9E_lViGaPVR7cMaGohIQVSWXA&s" alt="Mangalarga Marchador" width="350" height="350"> <p><i><mark>Mangalarga marchador</mark></i></p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRMjOz4nu2kESFiZBlu4KKYtqlVYNcCbjLdw&s" alt="Crioulo" width="350" height="350"> <p><i><mark>Crioulo</mark></i></p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5rcwqX445jPbu5Gm4UPHLqvmMqVJRuQsy4Q&s" alt="Cavalo Nordestino" width="350" height="350"> <p><i><mark>Pé duro</mark></i></p>
+
+            </figure>
+           
+            <p><strong>Importância do atributo 'alt':</strong> O atributo <code>alt</code> é essencial para a acessibilidade na web. Ele fornece uma descrição textual da imagem para usuários com deficiência visual que utilizam leitores de tela. Além disso, se a imagem não carregar, o texto aparecerá no lugar, mantendo o contexto da página.</p>
+        </section>
+
+        <section id="referencias">
+            <h2>Saiba Mais</h2>
+            <p>Para mais informações sobre o registro dessas raças, visite o site da <a href="https://www.abccmm.org.br/" target="_blank">ABCCMM (Mangalarga Marchador)</a> ou da <a href="https://www.abqm.com.br/" target="_blank">ABQM (Quarto de Milha)</a>.</p>
+        </section>
+         <h3><i><strong>FALE CONOSCO!</strong></i></h3>
+         <fieldset>
+             <legend><strong>Dúvidas sobre Equínos</strong></legend>
+             <form action="#"
+                 method="POST>
+         <label for="nome">Nome:</label>
+                 <input type="text"
+                     id="nome" name="name" required>
+                 <br></br>
+                 <label 
+                     for="email">E-mail:</label>
+                 <input type="email"
+                     id="email" name="email" requied>
+                 <br></br>
+                 <label for="mensagem">sua dúvida:</label>
+                 <texturea id="mensagem"
+                     name="mensagem" rows "8" required></texturea>
+                 <br></br>
+                 <button type="submit">enviar mensagem</button>
+             </form>
+         </sectio>
+         </fieldset>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Autoral desenvolvido para a aula de Estruturação Semântica.</p>
+    </footer>
+
+</body>
+</html>
+
