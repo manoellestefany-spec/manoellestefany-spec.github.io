@@ -1,23 +1,56 @@
 /* Configurações Gerais do Site */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fafdff;
+    background-color: #dcdcdc; /* Cinza suave de fundo geral */
     color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
 }
 
-/* Estilização do Topo (Header) */
-header {
+/* --- 1. ARQUITETURA DE LAYOUT GLOBAL (10.07.A) --- */
+/* Caixa invisível que limita o conteúdo em 80% da tela e centraliza */
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #fafdff; /* Fundo interno do site */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 2. CABEÇALHO FLEXÍVEL COM FLEXBOX (10.07.A) --- */
+.topo-site {
     background-color: #2c3e50; /* Azul escuro elegante */
     color: white;
     padding: 30px;
-    text-align: center;
     border-radius: 8px;
+    
+    display: flex;          /* Transforma o header em contêiner flexível */
+    align-items: center;    /* Alinha verticalmente o logo e o texto ao centro */
+    gap: 20px;              /* Espaço entre a imagem e os textos */
 }
 
-/* Títulos */
+/* Ajuste do tamanho do logotipo */
+.logo-site {
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%;     /* Deixa o logo circular elegante */
+}
+
+.titulos-topo {
+    text-align: left;       /* Garante que o texto fique alinhado à esquerda */
+}
+
+.titulos-topo h1 {
+    margin: 0 0 10px 0;
+}
+
+.titulos-topo p {
+    margin: 0;
+}
+
+/* Títulos das Seções */
 h2 {
     color: #2c3e50;
     border-bottom: 2px solid #bdc3c7;
@@ -25,43 +58,121 @@ h2 {
     margin-top: 40px;
 }
 
-/* Imagens das Raças lado a lado */
-figure {
+/* Grid de Imagens das Raças */
+.container-imagens {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 0;
+    padding: 20px 0;
 }
 
-figure img {
+.bloco-imagem {
+    text-align: center;
+}
+
+.bloco-imagem img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    object-fit: cover;
 }
 
-/* Formulário de Contato */
-fieldset {
+/* Tabela Personalizada */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #bdc3c7;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* --- 3. FORMULÁRIO: BOX MODEL, DISPLAY E CENTRALIZAÇÃO (08.07.A / 08.07.B) --- */
+
+/* Alvo: Classe personalizada aplicada no fieldset */
+.caixa-contato {
+    background-color: #ffffff;
     border: 2px solid #2c3e50;
     border-radius: 8px;
-    padding: 20px;
-    background-color: #ffffff;
+    padding: 20px; /* Preenchimento interno (respiro) */
+    
+    max-width: 500px; /* Restringe o tamanho máximo do formulário */
+    margin: 0 auto 30px auto; /* Centraliza horizontalmente e adiciona espaço abaixo */
 }
 
-button {
-    background-color: #27ae60; /* Verde */
-    color: white;
+/* Agrupamento de Seletores com a Regra do Espaço e da Vírgula */
+.caixa-contato label,
+.caixa-contato input,
+.caixa-contato textarea {
+    display: block;      /* Força cada elemento a ocupar sua própria linha (empilhados) */
+    width: 100%;          /* Faz os inputs/textareas preencherem toda a largura da caixa */
+    margin-bottom: 12px; /* Espaçamento externo inferior entre os campos */
+    box-sizing: border-box; /* Garante que o padding não quebre a largura de 100% */
+}
+
+/* Ajuste nas caixas de texto */
+.caixa-contato input,
+.caixa-contato textarea {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+/* Ajuste específico para a label não grudar no campo */
+.caixa-contato label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+/* Alvo Único: O botão de envio com ID exclusivo */
+#btn-enviar {
+    display: block;            /* Transforma em bloco para aceitar largura total */
+    width: 100%;               /* Ocupa toda a largura interna do formulário */
+    background-color: #27ae60; /* Verde institucional */
+    color: white;              /* Texto branco para contraste */
     border: none;
-    padding: 10px 20px;
+    padding: 12px;             /* Padding vertical confortável */
     font-size: 16px;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #219150; /* Escurece o botão ao passar o mouse */
+#btn-enviar:hover {
+    background-color: #219150; /* Escurece o botão no hover */
 }
 
-body {
-    background-color: #dcdcdc /* Este código hexadecimal representa um cinza bem suave */
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #7f8c8d;
+    font-size: 14px;
 }
+
+.logo-site {
+    display: inline-block;          /* Permite definir largura e altura para o link */
+    width: 150px;                   /* Defina a largura exata do seu logo */
+    height: 120px;                   /* Defina a altura exata do seu logo */
+    
+    background-image: url('caminho/para/o/seu-logo.jpg'); /* Caminho da imagem */
+    background-repeat: no-repeat;   /* Garante que a imagem não se vai repetir */
+    background-position: center;    /* Centraliza a imagem dentro do espaço definido */
+    background-size: contain;       /* Faz a imagem ajustar-se ao tamanho sem cortar ou distorcer */
+}
+
